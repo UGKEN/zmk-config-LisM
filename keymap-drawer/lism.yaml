@@ -1,6 +1,178 @@
 layout: {zmk_keyboard: lism}
 layers:
   Default Layer:
+  - {t: Q, h: RALT}
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: '-', h: LEFT ALT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: FSLH, h: RIGHT ALT}
+  - {t: ESCAPE, h: LSHIFT}
+  - {t: DEL, h: LCTRL}
+  - {t: TAB, h: Mark Layer}
+  - LCLK
+  - {t: BS, h: Mouse Layer}
+  - LEFT WIN
+  - RSHIFT
+  - {t: SPACE, h: Number Layer}
+  - {t: ▽, type: trans}
+  - Gui+A
+  - RCTRL
+  - {t: ENTER, h: RIGHT WIN}
+  Mouse Layer:
+  - Ctl+SPACE
+  - Ctl+LEFT ARROW
+  - UP ARROW
+  - Ctl+→
+  - Gui+SPACE
+  - '~'
+  - KP 7
+  - KP 8
+  - KP 9
+  - Sft+-
+  - Number Layer
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - '&mkp LCLK'
+  - KP DIVIDE
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP MINUS
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - '&mkp RCLK'
+  - KP ASTERISK
+  - KP 1
+  - KP 2
+  - KP 3
+  - {t: KP PLUS, h: RIGHT ALT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - KP NUMLOCK
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: KP 0, h: RIGHT SHIFT}
+  - KP DOT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Number Layer:
+  - Sft+1
+  - '"'
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Sft+7
+  - ''''
+  - Sft+9
+  - Sft+0
+  - '='
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - \
+  - Sft+\
+  - Sft+6
+  - Ctl+Sft+SPACE
+  - Ctl+SPACE
+  - Sft+2
+  - SEMI
+  - Sft+;
+  - '['
+  - {t: ']', h: RIGHT ALT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Reset
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Mark Layer, h: toggle, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Mark Layer, h: toggle}
+  Mark Layer:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Gui+[
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp LG(SPACE)'
+  - Gui+]
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: Default Layer, h: toggle}
+  - Sft+Gui+TAB
+  - Gui+W
+  - Gui+TAB
+  - {t: Device Layer, h: toggle}
+  - {t: ▽, type: trans}
+  - BT CLR
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: Default Layer, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Number Layer, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Device Layer:
   - Q
   - W
   - E
@@ -12,15 +184,15 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: LALT}
-  - {t: D, h: LSHIFT}
-  - {t: F, h: LGUI}
-  - {t: G, h: LCTRL}
-  - {t: H, h: RCTRL}
-  - {t: J, h: RGUI}
-  - {t: K, h: RSHIFT}
-  - {t: L, h: RALT}
-  - {t: ;, h: Mark Layer}
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - '-'
   - Z
   - X
   - C
@@ -30,188 +202,59 @@ layers:
   - M
   - ','
   - .
-  - /
-  - {t: DEL, h: Device Layer}
-  - {t: Mouse Layer, h: toggle}
-  - {t: TAB, h: Mouse Layer}
+  - {t: FSLH, h: RIGHT ALT}
+  - {t: ESCAPE, h: LSHIFT}
+  - {t: DEL, h: LALT}
+  - {t: TAB, h: Brank Layer}
   - Sft+Gui+4
-  - {t: SPACE, h: Number Layer}
-  - {t: ESC, h: Mark Layer}
-  - {t: BS, h: Mark Layer}
-  - {t: ENTER, h: Number Layer}
-  - Sft+Gui+4
-  - F7
-  - F10
-  - {t: F12, h: Device Layer}
-  Mouse Layer:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SPACE
-  - Gui+←
-  - Gui+→
-  - '&mkp MB3'
-  - {t: ▽, type: trans}
-  - '&mkp MB5'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Gui+↑
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_DOWN'
-  - '&mkp MB4'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Gui+↓
-  - ←
-  - ↑
-  - →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ↓
-  - {t: ▽, type: trans}
-  - Gui+W
-  Number Layer:
-  - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - '='
-  - F1
-  - F2
-  - F7
-  - F10
+  - {t: BS, h: Brank Layer}
+  - LCTRL
   - RSHIFT
-  - '*'
-  - {t: '4', h: LALT}
-  - {t: '5', h: LSHIFT}
-  - {t: '6', h: LGUI}
-  - {t: '-', h: LCTRL}
-  - '&mkp MB1'
-  - ←
-  - ↑
-  - →
-  - RGUI
-  - /
+  - {t: SPACE, h: Brank Layer}
+  - {t: ▽, type: trans}
+  - CAPS
+  - RALT
+  - {t: ENTER, h: RCTRL}
+  Brank Layer:
   - '1'
   - '2'
   - '3'
-  - +
-  - '&mkp MB2'
-  - ''
-  - ↓
-  - ''
-  - RALT
+  - '4'
+  - '5'
   - {t: ▽, type: trans}
-  - .
+  - {t: ▽, type: trans}
+  - Ctl+R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
   - '0'
-  - {t: ▽, type: trans}
-  - {t: LANG2, type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LANG1
-  - {t: ▽, type: trans}
-  - Sft+Ctl+TAB
-  - Ctl+TAB
-  - F12
-  Mark Layer:
-  - Sft+Gui+4
-  - F4
-  - (
-  - )
-  - ''
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '&emoji'
-  - F5
-  - '['
-  - ']'
-  - ''
-  - '`'
-  - _
-  - ''''
-  - '"'
-  - {t: \, type: held}
-  - KP NUMLOCK
-  - F11
-  - '{'
-  - '}'
-  - ''
-  - '|'
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - {t: ▽, type: trans}
-  - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ENTER
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - F12
-  Device Layer:
-  - ''
-  - ''
-  - ''
-  - ''
-  - BT CLR
+  - Alt+←
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - Alt+→
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Reset
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Reset
-  - {t: Boot, type: held}
-  - BT CLR ALL
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&studio_unlock'
-  - ''
-  - ''
-  - ''
-  - ''
-  - Boot
+  - {t: Default Layer, h: toggle}
+  - Sft+Ctl+TAB
+  - Ctl+W
+  - Ctl+TAB
+  - {t: Device Layer, h: toggle}
+  - {t: ▽, type: trans}
+  - Alt+Ctl+END
+  - {t: BT CLR, type: held}
+  - {t: ▽, type: trans}
+  - {t: Device Layer, h: toggle, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Brank Layer, h: toggle, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
