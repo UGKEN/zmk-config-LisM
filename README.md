@@ -6,20 +6,19 @@
 
 ## 生成されるファームウェア一覧
 
-|ファームウェア名                              |説明              |
-|-------------------------------------------|------------------|
-|`lism_left_non_trackball.uf2`              |左側 非トラックボール|
-|`lism_left_trackball.uf2`                  |左側 トラックボール  |
-|`lism_right_non_trackball.uf2`             |右側 非トラックボール|
-|`lism_right_trackball.uf2`                 |右側 トラックボール  |
-|`lism_right_non_trackball_studio.uf2`      |右側 非トラックボール (ZMK Studio 使用可)|
-|`lism_right_trackball_studio.uf2`          |右側 トラックボール (ZMK Studio 使用可)  |
-|`settings_reset-seeeduino_xiao_ble-zmk.uf2`|リセット用          |
-
+| ファームウェア名                                 | 説明                                    |
+|---------------------------------------------- |---------------------------------------|
+| `lism_left_peripheral_non_trackball.uf2`      | 左側 ペリフェラル 非トラックボール     |
+| `lism_left_peripheral_trackball.uf2`          | 左側 ペリフェラル トラックボール       |
+| `lism_right_central_non_trackball.uf2`        | 右側 セントラル 非トラックボール       |
+| `lism_right_central_trackball.uf2`            | 右側 セントラル トラックボール         |
+| `lism_right_central_non_trackball_studio.uf2` | 右側 セントラル 非トラックボール (ZMK Studio 対応) |
+| `lism_right_central_trackball_studio.uf2`     | 右側 セントラル トラックボール (ZMK Studio 対応)   |
+| `settings_reset-seeeduino_xiao_ble-zmk.uf2`   | 設定リセット用                        |
 
 ## ローカルビルド手順
 
-GitHub Actionsでのビルドは毎回2分前後かかりますが、ローカル環境では約30秒で完了します。  
+GitHub Actionsでのビルドは毎回2分-3分かかりますが、ローカル環境では40秒〜1分で完了します。(PCスペックによって前後します)  
 キーマップの変更など、少し試したいだけでも時間がかかるActionsに比べ、ローカルビルドなら素早く試行錯誤ができます。
 
 ### 必要なもの
@@ -38,16 +37,31 @@ GitHub Actionsでのビルドは毎回2分前後かかりますが、ローカ�
 2.  **ビルド（ファームウェア作成）**  
     VS Codeのターミナルで、以下のいずれかのコマンドを実行します。
 
-    - **すべてのファームウェアを一度に作成する場合(ZMK Studioサポートなし):**
+    > [!TIP]
+    > **並列ビルドで時間を短縮！**  
+    > ビルドはCPUコアを最大限に活用して並列実行できます。  
+    > 特に多くのファームウェアを一度にビルドする際に効果的です。  
+    > 並列数は自動でCPUコア数に設定されますが、環境変数 `PARALLEL` で指定することも可能です（例: `PARALLEL=4 make all_p`）。
+
+    - **すべてのファームウェアを並列で一度に作成する場合(ZMK Studioサポートなし):**
       ```bash
       make
       ```
 
-    - **すべてのファームウェアを一度に作成する場合(ZMK Studioサポートあり):**
+    - **すべてのファームウェアを並列で一度に作成する場合(ZMK Studioサポートあり):**
+      ```bash
+      make all_studio_p
+      ```
+
+    - **すべてのファームウェアを逐次で一度に作成する場合(ZMK Studioサポートなし):**
       ```bash
       make all
       ```
-      (`artifact-name` に「studio」を含むエントリは除外されます）
+
+    - **すべてのファームウェアを逐次で一度に作成する場合(ZMK Studioサポートあり):**
+      ```bash
+      make all
+      ```
 
     - **作成するファームウェアを選びたい場合:**
       ```bash
@@ -113,7 +127,7 @@ GitHub Actionsの`build-user-config.yml`に近いフローをVS Code Devcontaine
 - **スクリプト**:
   - `scripts/build-matrix.sh`: `build.yaml`のinclude行列を一括ビルド
   - `scripts/build-single-select.sh`: `build.yaml`のエントリをメニュー化して選択ビルド
-  - `scripts/lib/build-helpers.sh`: overlay処理、複数シールド対応、成果物コピーの共通ロジック
+  - `scripts/lib/build-helpers.sh`: 複数シールド対応、成果物コピーの共通ロジック
   - `scripts/west-common.sh`: パス設定とツールチェック
 - **成果物**:
   - `firmware_builds/` に `*.uf2`（優先）または `*.bin` をコピー
@@ -155,7 +169,14 @@ make setup-west
 
 </details>
 
+## セントラル／ペリフェラルの入れ替え
+
+LisM は左右どちらでも「セントラル（Central）」と「ペリフェラル（Peripheral）」を選べます。  
+既定は右セントラルですが、左セントラル構成も用意できます。
+1. `build.yaml` の「Central = Left」ブロックを有効化。
+1. `build.yaml` の「Central = Right」ブロックを無効化。
+1. ビルドして書き込み
+
 ## リンク
 - [ドキュメント](https://4mplelab.github.io/LisM/)
-- [ファームウェア(ハードウェア構成)](https://github.com/4mplelab/zmk-keyboards-LisM)
 - [販売ページ](https://shop.4mple-lab.com/items/119269662)
